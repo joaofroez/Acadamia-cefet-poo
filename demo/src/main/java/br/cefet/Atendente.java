@@ -7,5 +7,3 @@ public class Atendente extends Funcionario {
         super(nome, cpf, turno, cargo, matricula, salario); // Chama o construtor da classe Funcionario
     }
 }
-    // Adicione métodos específicos para a classe Atendente, se necessário
-    // Por exemplo, métodos para atendimento ao cliente, agendamento de aulas, etc.

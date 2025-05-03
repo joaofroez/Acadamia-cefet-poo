@@ -27,6 +27,13 @@ public class Main {
         "Bairro D", "Estado E", "11223-445", "112233445", "felipe@example.com", 
         "2002-03-03", "2025-03-03", 65.0f, 1.69f, 3, p3);
 
+        Assinatura as1 = new Assinatura(a1, p1, "2025-05-01", "2025-12-31", 
+        "Cartão", 100.0f);
+        Assinatura as2 = new Assinatura(a2, p2, "2025-06-01", "2025-12-31",
+        "Boleto", 50.0f);
+        Assinatura as3 = new Assinatura(a3, p3, "2025-07-01", "2025-12-31",
+        "Dinheiro", 30.0f);
+        
         List<Plano> listaPlanos = new ArrayList<>();
         List<Aluno> listaAlunos = new ArrayList<>();
         
@@ -50,5 +57,22 @@ public class Main {
             System.out.println("Plano: " + plano.getNome() + ", Tipo: " + plano.getTipo());
         }
 
+        System.out.println("\nLista de Assinaturas:");
+        for (Assinatura assinatura : List.of(as1, as2, as3)) {
+            System.out.println("Assinatura: " + assinatura.getAluno().getNome() + 
+            ", Plano: " + assinatura.getPlano().getTipo() +", Valor: R$" +assinatura.getValorMensalidade());
+        }
+        System.out.println("\nLista de Atendentes:");
+        for (Atendente atendente : List.of(at1)) {
+            System.out.println("Atendente: " + atendente.getNome() + ", Cargo: " + atendente.getCargo());
+        }
+        System.out.println("\nLista de Treinadores:");
+        for (Treinador treinador : List.of(t1)) {
+            System.out.println("Treinador: " + treinador.getNome() + ", Cargo: " + treinador.getCargo());
+        }
+        System.out.println("\nLista de Funcionários:");
+        for (Funcionario funcionario : List.of(at1, t1)) {
+            System.out.println("Funcionário: " + funcionario.getNome() + ", Cargo: " + funcionario.getCargo());
+        }
     }
 }
